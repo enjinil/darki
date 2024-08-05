@@ -1,0 +1,124 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+
+const colors = {
+  primary: 'hsl(191, 79%, 40%)',
+  secondary: 'hsl(215, 16%, 47%)',
+  success: 'hsl(144, 61%, 36%)',
+  danger: 'hsl(0, 59%, 49%)',
+  info: 'hsl(201, 98%, 39%)',
+  warning: 'hsl(48, 96%, 40%)',
+  red: 'hsl(0, 72%, 51%)',
+  orange: 'hsl(24, 95%, 48%)',
+  yellow: 'hsl(48, 96%, 40%)',
+  green: 'hsl(142, 76%, 36%)',
+  teal: 'hsl(173, 84%, 32%)',
+  cyan: 'hsl(190, 90%, 37%)',
+  blue: 'hsl(222, 84%, 53%)',
+  indigo: 'hsl(243, 75%, 59%)'
+};
+---
+
+<HorizontalLayout title="Color helpers | Darki Admin">
+  <PageHeader title="Color helpers" />
+  <PageBody>
+    <p class="text-p mb-xl">Change the color of the background, text, and border.</p>
+
+    <div class="grid-2 mb-xxl">
+      <div>
+        <div class="card mb-lg">
+          <div class="card__body content">
+            <h3>Text color</h3>
+    
+            <table>
+              <thead>
+                <tr>
+                  <th>Class</th>
+                  <th>Color</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>text-default</code></td>
+                  <td><code>hsl(201, 24%, 84%)</code></td>
+                  <td class="text-default">default</td>
+                </tr>
+                {Object.entries(colors).map(e => (
+                  <tr>
+                    <td><code>text-{e[0]}</code></td>
+                    <td><code>{e[1]}</code></td>
+                    <td class={`text-${e[0]}`}>{e[0]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__body content">
+            <h3>Border color</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Class</th>
+                  <th>Color</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>border-default</code></td>
+                  <td><code>hsl(205, 18%, 19%)</code></td>
+                  <td class="border border-default">default</td>
+                </tr>
+                {Object.entries(colors).map(e => (
+                  <tr>
+                    <td><code>border-{e[0]}</code></td>
+                    <td><code>{e[1]}</code></td>
+                    <td class={`border border-${e[0]}`}>{e[0]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__body content">
+          <h3>Background color</h3>
+  
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Color</th>
+                <th>Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              {Object.entries(colors).map(e => (
+                <tr>
+                  <td><code>bg-{e[0]}</code></td>
+                  <td><code>{e[1]}</code></td>
+                  <td class={`bg-${e[0]}`}>{e[0]}</td>
+                </tr>
+              ))}
+              {Object.entries(colors).map(e => (
+                <tr>
+                  <td><code>bg-{e[0]}-alt</code></td>
+                  <td>mix(<code>{e[1]}</code>, <code>hsl(206, 33%, 9%)</code>, 15%)</td>
+                  <td class={`bg-${e[0]}-alt`}>{e[0]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </PageBody>
+</HorizontalLayout>

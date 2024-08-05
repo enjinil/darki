@@ -1,0 +1,16 @@
+// ✨ Avatar
+.avatar {
+  height: $field-height;
+  width: $field-height;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid $border-color;
+  font-size: 0;
+
+  > img {
+    display: block;
+    height: $field-height;
+    width: $field-height;
+  }
+}

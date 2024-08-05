@@ -1,0 +1,98 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+
+import * as NotificationsExample from "../markdowns/notifications-example.md";
+---
+
+<HorizontalLayout title="Cards | Darki Admin">
+  <PageHeader pretitle="Element" title="Cards" />
+  <PageBody>
+    <div class="grid-3 mb-xxl">
+      <div>
+        <div class="card mb-lg">
+          <div class="card__header">
+            <span class="card__title">Card title</span>
+          </div>
+          <div class="card__body">Card body</div>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <span class="card__title">Card with actions</span>
+          </div>
+          <div class="card__body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+              deleniti fugit incidunt, iste, itaque minima neque pariatur
+              perferendis sed suscipit velit vitae voluptatem.
+            </p>
+          </div>
+          <div class="card__footer">
+            <div class="level">
+              <div class="level__left">
+                <button class="button button--text">Cancel</button>
+              </div>
+              <div class="level__right">
+                <button class="button button--primary">Continue</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card mb-lg bg-info-alt">
+          <div class="card__body">
+            <h3 class="card__title mb-md">Plain card with color</h3>
+            <p class="text-p">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Architecto at consectetur culpa ducimus eum fuga.
+            </p>
+          </div>
+        </div>
+        <div class="card card--borderless mb-lg">
+          <div class="card__body">
+            <h3 class="card__title mb-md">Borderless</h3>
+            <p class="text-p">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Architecto at consectetur culpa ducimus eum fuga.
+            </p>
+          </div>
+        </div>
+        <a href="#" class="card card--link mb-lg">
+          <div class="card__body">
+            <h3 class="card__title mb-md">Hoverable link</h3>
+            <p class="text-p">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Architecto at consectetur culpa ducimus eum fuga.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div>
+        <div class="card mb-lg">
+          <div class="card__img">
+            <div class="img-21x9" style="background-image: url(/images/alexandros-giannakakis-2NAlnB5B6_M-unsplash.jpg);"></div>
+          </div>
+          <div class="card__header">
+            <span class="card__title">Card with image</span>
+          </div>
+          <div class="card__body">
+            <p class="text-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste.</p>
+          </div>
+        </div>
+        <div class="card mb-lg">
+          <div class="card__header">
+            <span class="card__title">Card with bottom image</span>
+          </div>
+          <div class="card__body">
+            <p class="text-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste.</p>
+          </div>
+          <div class="card__img">
+            <div class="img-21x9" style="background-image: url(/images/alexandros-giannakakis-2NAlnB5B6_M-unsplash.jpg);"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </PageBody>
+</HorizontalLayout>

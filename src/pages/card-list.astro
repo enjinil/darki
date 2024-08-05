@@ -1,0 +1,139 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+
+const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+---
+
+<HorizontalLayout title="Card list | Darki Admin">
+  <ul class="breadcrumb mt-lg">
+    <li class="breadcrumb__item"><a href="/">Home</a></li>
+    <li class="breadcrumb__item"><span>Jobs</span></li>
+  </ul>
+  <PageHeader title="Card list">
+    <div class="button-group">
+      <a href="#" class="button button--primary">Create Job</a>
+    </div>
+  </PageHeader>
+  <PageBody>
+    <!-- filters -->
+    <div class="level mb-xl">
+      <div class="level__left">
+        <div class="button-group">
+          <input type="text" class="input" placeholder="Find jobs" />
+          <div class="select">
+            <select>
+              <option value="remote" selected>Remote</option>
+              <option value="remote">On-site</option>
+            </select>
+          </div>
+          <button class="button">Search</button>
+        </div>
+      </div>
+      <div class="level__right">
+        <div class="row align-center">
+          <div class="text-secondary text-md mr-lg pr-lg border-r">
+            Showing 1-9 of 27 entries
+          </div>
+          <ul class="pagination">
+            <li class="pagination__prev is-disabled">
+              <a href="#" class="pagination__link"></a>
+            </li>
+            <li class="pagination__item is-active">
+              <a href="#" class="pagination__link">1</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">2</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">3</a>
+            </li>
+            <li class="pagination__next">
+              <a href="#" class="pagination__link"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- card lists -->
+    <div class="grid-3 mb-xl">
+      {
+        items.map((x) => (
+          <a href="#" class="card card--link">
+            <div class="card__body">
+              <div class="row mb-md">
+                <div class="w-4rem my-sm">
+                  <div
+                    class="img-circle"
+                    style="background-image: url(/images/company.jpg);"
+                  />
+                </div>
+                <div class="col-grow pl-lg">
+                  <div class="text-title mb-sm">Senior Software Engineer</div>
+                  <div class="text-secondary mb-sm">The Wolv Company</div>
+                  <div>
+                    <span class="badge badge--primary font-bold">REMOTE</span>
+                    <span class="badge badge--secondary">Salary $20k-40k</span>
+                  </div>
+                </div>
+              </div>
+              <div class="level text-sm text-secondary pt-sm">
+                <div class="level__left">
+                  <div class="mb-sm">Posted 3 days ago</div>
+                  <div>Apply before 31/12/2024</div>
+                </div>
+                <div class="level__right">
+                  <div class="button-group">
+                    <button class="button button--icon button--text">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="1em"
+                        height="1em"
+                      >
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+    <!-- pagination -->
+    <div class="level mb-xxl">
+      <div class="level__right">
+        <div class="row align-center">
+          <div class="text-secondary text-md mr-lg pr-lg border-r">
+            Showing 1-9 of 27 entries
+          </div>
+          <ul class="pagination">
+            <li class="pagination__prev is-disabled">
+              <a href="#" class="pagination__link"></a>
+            </li>
+            <li class="pagination__item is-active">
+              <a href="#" class="pagination__link">1</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">2</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">3</a>
+            </li>
+            <li class="pagination__next">
+              <a href="#" class="pagination__link"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </PageBody>
+</HorizontalLayout>

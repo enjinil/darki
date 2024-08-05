@@ -1,0 +1,69 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+---
+
+<HorizontalLayout title="Key-value form | Darki Admin">
+  <ul class="breadcrumb mt-lg">
+    <li class="breadcrumb__item"><a href="/">Home</a></li>
+    <li class="breadcrumb__item"><a href="/">Products</a></li>
+    <li class="breadcrumb__item"><span>Categories</span></li>
+  </ul>
+  <PageHeader title="Key-value form">
+    <a class="button button--primary" href="#">Save Changes</a>
+  </PageHeader>
+  <PageBody>
+    <div class="table-card colspan-3">
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Code</th>
+              <th style="width:100px"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input type="text" class="input w-full" value="Sport Wear" />
+              </td>
+              <td>
+                <input type="text" class="input w-full" value="sport_wear" />
+              </td>
+              <td class="text-right">
+                <a class="button" href="#">Remove</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" class="input w-full" value="Formal Outfit" />
+              </td>
+              <td>
+                <input type="text" class="input w-full" value="formal" />
+              </td>
+              <td class="text-right">
+                <a class="button" href="#">Remove</a>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <div class="level">
+                  <div class="level__left">
+                    <a href="#" class="button button--secondary"
+                      >Add Attribute</a
+                    >
+                  </div>
+                  <div class="level__right">
+                    <span>You can add up to 8 more categories</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </PageBody>
+</HorizontalLayout>

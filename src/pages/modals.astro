@@ -1,0 +1,173 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+
+import * as ModalsExample from "../markdowns/modals-example.md";
+---
+
+<HorizontalLayout title="Modals | Darki Admin">
+  <PageHeader pretitle="Element" title="Modals" />
+  <PageBody>
+    <div class="card mb-xxl">
+      <div class="card__header">
+        <span class="card__title">Example</span>
+      </div>
+      <div class="card__body">
+        <div class="mb-xl">
+          <button
+            class="button button--primary"
+            data-target="modal"
+            data-modal-id="card-modal">Simple modal</button
+          >
+          <button
+            class="button button--success"
+            data-target="modal"
+            data-modal-id="success-modal">Success modal</button
+          >
+          <button
+            class="button button--danger"
+            data-target="modal"
+            data-modal-id="danger-modal">Confirm modal</button
+          >
+        </div>
+        <div class="content">
+          <ModalsExample.Content />
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="card-modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
+        <div class="card">
+          <div class="card__header">
+            <span class="card__title">Modal title</span>
+            <span class="card__action">
+              <button class="modal__close">close</button>
+            </span>
+          </div>
+          <div class="card__body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum?
+            </p>
+          </div>
+          <div class="card__footer">
+            <div class="level">
+              <div class="level__left">
+                <button class="button button--text" data-modal="close">Cancel</button>
+              </div>
+              <div class="level__right">
+                <button class="button button--primary" data-modal="close">Continue</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--sm modal--success" id="success-modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
+        <div class="card">
+          <div class="card__body text-center">
+            <div class="py-md">
+              <div class="mb-md">
+                <svg
+                  class="text-success"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48px"
+                  height="48px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline
+                    points="22 4 12 14.01 9 11.01"></polyline></svg
+                >
+              </div>
+              <div class="text-title text-success mb-lg">
+                Payment Successful!
+              </div>
+              <div class="text-p mb-md">
+                Thank you for your payment. <br /> Your transaction has been successfully
+                processed.
+              </div>
+              <div class="text-p text-left px-xl">
+                Transaction Details: <br />
+                <div class="font-bold mt-sm">
+                  Amount: $XX.XX <br />
+                  Payment Method: [Credit Card] <br />
+                  Transaction ID: [Transaction ID]
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card__footer">
+            <div class="grid-2">
+              <button class="button button--secondary" data-modal="close"
+                >Back to Home</button
+              >
+              <button class="button button--success" data-modal="close"
+                >View Invoice</button
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--sm modal--danger" id="danger-modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
+        <div class="card">
+          <div class="card__body text-center">
+            <div class="py-md">
+              <div class="mb-md">
+                <svg
+                  class="text-danger"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48px"
+                  height="48px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path
+                    d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+                  ></path><line x1="12" y1="9" x2="12" y2="13"></line><line
+                    x1="12"
+                    y1="17"
+                    x2="12.01"
+                    y2="17"></line></svg
+                >
+              </div>
+              <div class="text-title mb-lg">Are you sure?</div>
+              <div class="text-p mb-md">
+                Your are about to delete a product permanently. <br />
+                You will not be able to recover it.
+              </div>
+            </div>
+          </div>
+          <div class="card__footer">
+            <div class="grid-2">
+              <button class="button button--secondary" data-modal="close"
+                >Cancel</button
+              >
+              <button class="button button--danger" data-modal="close"
+                >Delete Product</button
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </PageBody>
+</HorizontalLayout>

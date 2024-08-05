@@ -1,0 +1,205 @@
+<header>
+  <div class="navbar">
+    <div class="container">
+      <div class="level">
+        <div class="level__left">
+          <button class="navbar-toggler navbar-expanded:hide"></button>
+          <a class="navbar-brand" href="/">
+            <img class="navbar-logo" src="/logo.png" />
+            darki
+          </a>
+        </div>
+        <div class="level__right space-x-2">
+          <div class="navbar-nav">
+            <a href="https://github.com/enjinil/darki" target="_blank" class="navbar-link">Use Darki ✨</a>
+            <a href="#" class="navbar-link navbar-link--icon relative">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+              <span class="badge badge--red absolute top-0 right-0"></span>
+            </a>
+            <a href="" class="navbar-link">
+              <div class="avatar">
+                <img src="/images/avatar.png" alt="Jean Ken" />
+              </div>
+              <div class="ml-md">
+                <div>Jean Ken</div>
+                <div class="text-sm text-secondary">Developer</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar">
+    <div class="container">
+      <ul class="navbar-nav">
+        <li class="navbar-item is-active">
+          <a href="/" class="navbar-link">
+            <svg
+              class="navbar-link-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span class="navbar-link-text">Home</span>
+          </a>
+        </li>
+        <li class="navbar-item navbar-item--with-dropdown">
+          <a href="#" class="navbar-link">
+            <svg
+              class="navbar-link-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            <span class="navbar-link-text">Elements</span>
+          </a>
+          <div class="navbar-item-dropdown">
+            <div class="grid-2 grid--nogap">
+              <ul class="list list--sm">
+                <li class="list__item"><a href="/alerts">Alerts</a></li>
+                <li class="list__item"><a href="/article">Article</a></li>
+                <li class="list__item"><a href="/badges">Badges</a></li>
+                <li class="list__item"><a href="/buttons">Buttons</a></li>
+                <li class="list__item">
+                  <a href="/breadcrumbs">Breadcrumbs</a>
+                </li>
+              </ul>
+              <ul class="list list--sm">
+                <li class="list__item"><a href="/cards">Cards</a></li>
+                <li class="list__item"><a href="/dropdowns">Dropdowns</a></li>
+                <li class="list__item"><a href="/lists">Lists</a></li>
+                <li class="list__item"><a href="/modals">Modals</a></li>
+                <li class="list__item"><a href="/tables">Tables</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="navbar-item">
+          <a href="/forms" class="navbar-link">
+            <svg
+              class="navbar-link-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              ></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <span>Forms</span>
+          </a>
+        </li>
+        <li class="navbar-item navbar-item--with-dropdown">
+          <a href="#" class="navbar-link">
+            <svg
+              class="navbar-link-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path
+                d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+              ></path>
+            </svg>
+            <span>Patterns</span>
+          </a>
+          <div class="navbar-item-dropdown">
+            <div class="grid-2 grid--nogap">
+              <ul class="list list--sm">
+                <li class="list__item"><a href="/auth-login">Auth</a></li>
+                <li class="list__item"><a href="/card-list">Card list</a></li>
+                <li class="list__item"><a href="/table-list">Table list</a></li>
+              </ul>
+              <ul class="list list--sm">
+                <li class="list__item"><a href="/profile">User profile</a></li>
+                <li class="list__item">
+                  <a href="/single-form">Single form</a>
+                </li>
+                <li class="list__item">
+                  <a href="/key-value-form">Key-value form</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="navbar-item navbar-item--with-dropdown">
+          <a href="#" class="navbar-link">
+            <svg
+              class="navbar-link-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 -960 960 960"
+              width="1em"
+              fill="currentColor"
+              ><path
+                d="M400-160h160v-160H400v160ZM160-400h160v-160H160v160Zm240 0h160v-160H400v160Zm240 0h160v-160H640v160Zm0-240h160v-160H640v160ZM320-80v-240H80v-320h480v-240h320v560H640v240H320Z"
+              ></path></svg
+            >
+            <span>CSS Helpers</span>
+          </a>
+          <div class="navbar-item-dropdown">
+            <div class="grid-2 grid--nogap">
+              <ul class="list list--sm">
+                <li class="list__item"><a href="/color-helpers">Color</a></li>
+                <li class="list__item"><a href="/spacing-helpers">Spacing</a></li>
+                <li class="list__item"><a href="/typography-helpers">Typography</a></li>
+              </ul>
+              <ul class="list list--sm">
+                <li class="list__item"><a href="/visibility-helpers">Visibility</a></li>
+                <li class="list__item"><a href="/layout-helpers">Layout</a></li>
+                <li class="list__item"><a href="/other-helpers">Other</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

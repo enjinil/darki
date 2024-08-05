@@ -1,0 +1,91 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+
+const widths = {
+  full: "100%",
+  "25": "25%",
+  "30": "30%",
+  "40": "40%",
+  "50": "50%",
+  "60": "60%",
+  "70": "70%",
+  "75": "75%",
+  sm: "352px",
+  md: "480px",
+  lg: "960px",
+  "1rem": "16px",
+  "2rem": "32px",
+  "4rem": "64px",
+  "8rem": "128px",
+  "16rem": "256px",
+  "32rem": "512px",
+};
+---
+
+<HorizontalLayout title="Layout helpers | Darki Admin">
+  <PageHeader title="Layout helpers" />
+  <PageBody>
+    <p class="text-p mb-xl">Helpers to lay out elements.</p>
+    <div class="card mb-xxl">
+      <div class="card__body content">
+        <h3>Position</h3>
+        <ul>
+          <li><code>relative</code></li>
+          <li><code>absolute</code></li>
+          <li><code>fixed</code></li>
+          <li><code>t-0</code></li>
+          <li><code>r-0</code></li>
+          <li><code>b-0</code></li>
+          <li><code>l-0</code></li>
+        </ul>
+        <h3>Row</h3>
+        <p>Organise child elements horizontally</p>
+        <ul>
+          <li><code>row</code></li>
+          <li><code>align-center</code> - aligning items center vertically</li>
+          <li>
+            <code>justify-center</code> - aligning items center horizontally
+          </li>
+        </ul>
+        <h4>Row item</h4>
+        <ul>
+          <li><code>col-grow</code> - expand element to fill row space.</li>
+        </ul>
+        <h3>Stack</h3>
+        <p>Organise child elements vertically.</p>
+        <ul>
+          <li><code>stack</code></li>
+          <li>
+            <code>align-center</code> - aligning items center horizontally
+          </li>
+          <li>
+            <code>justify-center</code> - aligning items center vertically
+          </li>
+        </ul>
+        <h3>Widths</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Width</th>
+            </tr>
+          </thead>
+          <tbody>
+            {Object.entries(widths).map(e => (
+              <tr>
+                <td><code>{e[0]}</code></td>
+                <td>{e[1]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <h3>Heights</h3>
+        <ul>
+          <li><code>h-full</code></li>
+        </ul>
+      </div>
+    </div>
+  </PageBody>
+</HorizontalLayout>

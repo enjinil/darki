@@ -1,0 +1,44 @@
+// ✨ Breadcrumb
+.breadcrumb {
+  display: inline-flex;
+  background-color: $bg-elevated;
+  font-size: .8rem;
+  line-height: 1rem;
+  border-radius: 4px;
+  color: $text-secondary;
+  border: 1px solid $border-color;
+  padding: 1px 0;
+  letter-spacing: .2px;
+  box-shadow: $shadow;
+}
+
+.breadcrumb__item {
+  padding: .25rem 1rem;
+  position: relative;
+
+  &:not(:last-child)::before {
+    content: "";
+    height: 6px;
+    width: 2px;
+    right: -2px;
+    top: 8px;
+    border-radius: 2px;
+    background: $text-secondary;
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+  }
+
+  &:not(:last-child)::after {
+    content: "";
+    height: 6px;
+    width: 2px;
+    right: -2px;
+    bottom: 7px;
+    border-radius: 2px;
+    background: $text-secondary;
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+  }
+}

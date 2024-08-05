@@ -1,0 +1,142 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+
+const colors = [
+  "",
+  "text",
+  "primary",
+  "secondary",
+  "success",
+  "danger",
+  "info",
+  "warning",
+];
+---
+
+<HorizontalLayout title="Buttons | Darki Admin">
+  <PageHeader pretitle="Element" title="Buttons" />
+  <PageBody>
+    <div class="card mb-lg">
+      <div class="card__header">
+        <span class="card__title">Button variants</span>
+      </div>
+      <div class="card__body">
+        <div class="button-group">
+          {
+            colors.map((c) => (
+              <a href="#" class={["button", c && `button--${c}`].join(" ")}>
+                {c || "default"}
+              </a>
+            ))
+          }
+          {
+            colors.map((c) => (
+              <a
+                href="#"
+                class={["button", "button--icon", c && `button--${c}`].join(
+                  " "
+                )}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="1em"
+                  height="1em"
+                >
+                  <>
+                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                  </>
+                </svg>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+    <div class="card mb-lg">
+      <div class="card__header">
+        <span class="card__title">Button states</span>
+      </div>
+      <div class="card__body">
+        <h3 class="title mb-md">Disabled</h3>
+        <div class="button-group mb-xl">
+          {
+            colors.map((c) => (
+              <a
+                href="#"
+                class={["button", "is-disabled", c && `button--${c}`].join(" ")}
+              >
+                {c || "default"}
+              </a>
+            ))
+          }
+        </div>
+        <h3 class="title mb-md">Hover</h3>
+        <div class="button-group mb-xl">
+          {
+            colors.map((c) => (
+              <a
+                href="#"
+                class={["button", "is-hovered", c && `button--${c}`].join(" ")}
+              >
+                {c || "default"}
+              </a>
+            ))
+          }
+        </div>
+        <h3 class="title mb-md">Focus</h3>
+        <div class="button-group mb-xl">
+          {
+            colors.map((c) => (
+              <a
+                href="#"
+                class={["button", "is-focused", c && `button--${c}`].join(" ")}
+              >
+                {c || "default"}
+              </a>
+            ))
+          }
+        </div>
+        <h3 class="title mb-md">Loading</h3>
+        <div class="button-group mb-lg">
+          {
+            colors.map((c) => (
+              <a
+                href="#"
+                class={["button", "is-loading", c && `button--${c}`].join(" ")}
+              >
+                {c || "default"}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+    <div class="card mb-xxl">
+      <div class="card__header">
+        <span class="card__title">Example</span>
+      </div>
+      <div class="card__body">
+        <div class="level">
+          <div class="level__left">
+            <a href="#" class="button button--danger">Delete Product</a>
+          </div>
+          <div class="level__right">
+            <div class="button-group">
+              <a href="#" class="button button--text">Cancel</a>
+              <a href="#" class="button button--primary">Save Changes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </PageBody>
+</HorizontalLayout>

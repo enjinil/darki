@@ -1,0 +1,101 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+
+import * as DropdownsExample from "../markdowns/dropdowns-example.md";
+---
+
+<HorizontalLayout title="Dropdowns | Darki Admin">
+  <PageHeader pretitle="Element" title="Dropdowns" />
+  <PageBody>
+    <div class="card mb-lg">
+      <div class="card__header">
+        <span class="card__title">Example</span>
+      </div>
+      <div class="card__body">
+        <div class="grid-4 mb-xl">
+          <div>
+            <div class="dropdown">
+              <div class="dropdown__trigger">
+                <button
+                  class="button"
+                  aria-haspopup="true"
+                  aria-controls="dropdown1">Dropdown</button
+                >
+              </div>
+              <div class="dropdown__menu" id="dropdown1" role="menu">
+                <div class="dropdown__content">
+                  <a href="#" class="dropdown__item">Dropdown item</a>
+                  <a href="#" class="dropdown__item is-active">Active item</a>
+                  <hr class="dropdown__divider" />
+                  <a href="#" class="dropdown__item">Dropdown item</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="dropdown dropdown--hoverable">
+              <div class="dropdown__trigger">
+                <button
+                  class="button"
+                  aria-haspopup="true"
+                  aria-controls="dropdown2">Hoverable</button
+                >
+              </div>
+              <div class="dropdown__menu" id="dropdown2" role="menu">
+                <div class="dropdown__content">
+                  <a href="#" class="dropdown__item">Dropdown item</a>
+                  <a href="#" class="dropdown__item is-active">Active item</a>
+                  <hr class="dropdown__divider" />
+                  <a href="#" class="dropdown__item">Dropdown item</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="dropdown dropdown--right">
+              <div class="dropdown__trigger">
+                <button
+                  class="button"
+                  aria-haspopup="true"
+                  aria-controls="dropdown3">Align right</button
+                >
+              </div>
+              <div class="dropdown__menu" id="dropdown3" role="menu">
+                <div class="dropdown__content">
+                  <a href="#" class="dropdown__item">Dropdown item</a>
+                  <a href="#" class="dropdown__item is-active">Active item</a>
+                  <hr class="dropdown__divider" />
+                  <a href="#" class="dropdown__item">Dropdown item</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="dropdown dropdown--up">
+              <div class="dropdown__trigger">
+                <button
+                  class="button"
+                  aria-haspopup="true"
+                  aria-controls="dropdown4">Drop up</button
+                >
+              </div>
+              <div class="dropdown__menu" id="dropdown4" role="menu">
+                <div class="dropdown__content">
+                  <a href="#" class="dropdown__item">Dropdown item</a>
+                  <a href="#" class="dropdown__item is-active">Active item</a>
+                  <hr class="dropdown__divider" />
+                  <a href="#" class="dropdown__item">Dropdown item</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <DropdownsExample.Content />
+        </div>
+      </div>
+    </div>
+  </PageBody>
+</HorizontalLayout>

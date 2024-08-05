@@ -1,0 +1,158 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+const users = new Array(10).fill(1).map(_ => ({
+  username: "tokyo_tanaka" + Math.floor(Math.random() * 100),
+  email: "tokyotanaka@testmail.com",
+  status: ["active", "inactive"][getRandomInt(2)],
+  membership: ["free", "premium"][getRandomInt(2)],
+  last_online: "12:52:00 12-01-2024"
+}));
+---
+
+<HorizontalLayout title="Table list | Darki Admin">
+  <ul class="breadcrumb mt-lg">
+    <li class="breadcrumb__item"><a href="/">Home</a></li>
+    <li class="breadcrumb__item"><span>Users</span></li>
+  </ul>
+  <PageHeader title="Table list">
+    <div class="button-group">
+      <a href="#" class="button button--primary">Create User</a>
+    </div>
+  </PageHeader>
+  <PageBody>
+    <!-- filters -->
+    <div class="level mb-lg">
+      <div class="level__left">
+        <div class="button-group">
+          <input type="text" class="input" placeholder="Find users" />
+          <div class="select">
+            <select>
+              <option value="all" selected>All</option>
+              <option value="active">Active</option>
+              <option value="inactive">Inactive</option>
+            </select>
+          </div>
+          <button class="button">Search</button>
+        </div>
+      </div>
+    </div>
+    <!-- card lists -->
+    <div class="table-card mb-lg">
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Username<a href="#" class="table__sort is-desc"></a></th>
+              <th>Email<a href="#" class="table__sort"></a></th>
+              <th>Status</th>
+              <th>Membership<a href="#" class="table__sort"></a></th>
+              <th>Last online<a href="#" class="table__sort"></a></th>
+              <th style="width: 40px"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              users.map((u, i) => (
+                <tr>
+                  <td>{u.username}</td>
+                  <td>{u.email}</td>
+                  <td>
+                    <span
+                      class={
+                        "mr-sm badge badge--" +
+                        (u.status == "active" ? "green" : "red")
+                      }
+                    />
+                    {u.status}
+                  </td>
+                  <td>{u.membership}</td>
+                  <td>{u.last_online}</td>
+                  <td>
+                    <div
+                      class={
+                        "dropdown dropdown--right " +
+                        (i > 1 ? "dropdown--up" : "")
+                      }
+                    >
+                      <div class="dropdown__trigger">
+                        <a
+                          href="#"
+                          class="text-lg text-default flex"
+                          title="Actions"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <circle cx="12" cy="12" r="1" />
+                            <circle cx="19" cy="12" r="1" />
+                            <circle cx="5" cy="12" r="1" />
+                          </svg>
+                        </a>
+                      </div>
+                      <div
+                        class="dropdown__menu"
+                        id={"dropdown-" + i}
+                        role="menu"
+                      >
+                        <div class="dropdown__content">
+                          <a href="#" class="dropdown__item">
+                            Detail
+                          </a>
+                          <a href="#" class="dropdown__item is-active">
+                            Delete
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- pagination -->
+    <div class="level mb-xxl">
+      <div class="level__right">
+        <div class="row align-center">
+          <div class="text-secondary text-md mr-lg pr-lg border-r">
+            Showing 1-9 of 27 entries
+          </div>
+          <ul class="pagination">
+            <li class="pagination__prev is-disabled">
+              <a href="#" class="pagination__link"></a>
+            </li>
+            <li class="pagination__item is-active">
+              <a href="#" class="pagination__link">1</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">2</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">3</a>
+            </li>
+            <li class="pagination__next">
+              <a href="#" class="pagination__link"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </PageBody>
+</HorizontalLayout>

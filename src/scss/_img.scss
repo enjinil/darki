@@ -1,0 +1,28 @@
+// ✨ Img
+%img {
+  background: no-repeat center/cover;
+  padding-top: var(--img-aspect-ratio);
+  display: block;
+  width: 100%;
+}
+
+.img-21x9 {
+  --img-aspect-ratio: 42.857142857%;
+  @extend %img;
+}
+
+.img-16x9 {
+  --img-aspect-ratio: 56.25%;
+  @extend %img;
+}
+
+.img-1x1 {
+  --img-aspect-ratio: 100%;
+  @extend %img;
+}
+
+.img-circle {
+  --img-aspect-ratio: 100%;
+  border-radius: 50%;
+  @extend %img;
+}

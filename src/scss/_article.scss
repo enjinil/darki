@@ -1,0 +1,232 @@
+// ✨ Article
+.article,
+.content {
+  line-height: 1.5;
+  font-size: 0.875rem;
+
+  @each $name, $rules in $typography-scales {
+    #{$name} {
+      @each $prop, $value in $rules {
+        #{$prop}: #{$value};
+      }
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: $font-bold;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  table,
+  blockquote,
+  pre {
+    margin-bottom: $gap;
+  }
+
+  * {
+    & + h1,
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + h6 {
+      padding-top: 0.5rem;
+    }
+  }
+
+  hr {
+    border-width: 0 0 1px 0;
+    border-color: $border-color;
+    margin: 1.5rem 0;
+  }
+
+  b,
+  strong {
+    font-weight: $font-bold;
+  }
+
+  i,
+  em {
+    font-style: italic;
+  }
+
+  blockquote {
+    font-size: 1rem;
+    margin: 1.5rem 0;
+    padding: 0.5rem 1.5rem;
+    border-left: 2px solid $border-color;
+
+    blockquote {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  ol,
+  ul {
+    padding-left: 1.5rem;
+  }
+
+  ul,
+  menu,
+  dir {
+    display: block;
+    list-style-type: disc;
+    // margin-block-start: 1em;
+    // margin-block-end: 1em;
+    // padding-inline-start: 40px;
+  }
+
+  ul,
+  ol,
+  menu {
+    ul,
+    ol,
+    p {
+      margin: 0;
+    }
+  }
+
+  ol {
+    display: block;
+    list-style-type: decimal;
+  }
+
+  li {
+    display: list-item;
+    text-align: match-parent;
+  }
+
+  :is(ol, ul, menu, dir) ul,
+  :is(ol, ul, menu, dir) menu,
+  :is(ol, ul, menu, dir) dir {
+    list-style-type: circle;
+  }
+
+  :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) ul,
+  :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) menu,
+  :is(ol, ul, menu, dir) :is(ol, ul, menu, dir) dir {
+    list-style-type: square;
+  }
+
+  code {
+    font-size: 0.8rem;
+    padding: 2px 4px;
+    border-radius: 4px;
+    background-color: brighten($bg-elevated, 2);
+    font-family: $family-monospace;
+    text-wrap: nowrap;
+    text-shadow: $text-shadow;
+  }
+
+  pre {
+    padding-bottom: 0.5rem;
+  }
+
+  pre code {
+    display: block;
+    padding: 0.8rem 1rem;
+  }
+
+  table {
+    display: table;
+    caption-side: bottom;
+    border-collapse: collapse;
+    vertical-align: top;
+    border: 1px solid $border-color;
+    text-indent: 0;
+    line-height: 1.25rem;
+  }
+
+  table[align="left"] {
+    float: left;
+  }
+  
+  table[align="right"] {
+    float: right;
+    text-align: start;
+  }
+
+  tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-bottom: 1px solid $border-color;
+  }
+  
+  col {
+    display: table-column;
+  }
+  
+  colgroup {
+    display: table-column-group;
+  }
+  
+  tbody {
+    display: table-row-group;
+    vertical-align: middle;
+  }
+  
+  thead {
+    display: table-header-group;
+    vertical-align: middle;
+  }
+  
+  tfoot {
+    display: table-footer-group;
+    vertical-align: middle;
+  }
+
+  table > tr {
+    vertical-align: middle;
+  }
+  
+  td {
+    display: table-cell;
+    vertical-align: inherit;
+    padding: .5rem 1rem;
+  }
+  
+  th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    padding: 1px;
+    text-align: left;
+    padding: .5rem 1rem;
+    border-bottom: 2px solid $border-color;
+  }
+
+  sub {
+    vertical-align: sub;
+    font-size: smaller;
+  }
+  
+  sup {
+    vertical-align: super;
+    font-size: smaller;
+  }
+
+  dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+  }
+  
+  dd {
+    display: block;
+    margin-inline-start: 40px;
+  }
+}

@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageBody from "../components/PageBody.astro";
+---
+
+<Layout title="Register | Darki Admin">
+  <PageBody centered>
+    <form class="w-sm py-xl" action="">
+      <h1 class="text-h1 mb-xl">Register</h1>
+      <div class="card mb-xl">
+        <div class="card__body">
+          <div class="mb-lg">
+            <div class="field">
+              <label for="" class="field__label">Username</label>
+              <div class="field__control">
+                <input class="input" type="text" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="field__label">Full name</label>
+              <div class="field__control">
+                <input class="input" type="text" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="field__label">Password</label>
+              <div class="field__control">
+                <input class="input" type="password" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="field__label">Retype password</label>
+              <div class="field__control">
+                <input class="input" type="password" />
+              </div>
+            </div>
+          </div>
+          <div class="mb-lg">
+            <label class="checkbox">
+              <input type="checkbox" />
+              <div>I agree to the <a href="#"> terms and conditions</a></div>
+            </label>
+          </div>
+          <button class="button button--primary w-full mb-xl">Register</button>
+          <div class="text-md text-center pb-md">
+            <p class="mb-md">
+              <a href="auth-login">Already has account</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="text-sm text-center mb-md">
+        <a href="/">Back to home</a>
+      </div>
+    </form>
+  </PageBody>
+</Layout>

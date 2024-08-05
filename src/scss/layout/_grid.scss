@@ -1,0 +1,56 @@
+// ✨ Grid
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;  
+  row-gap: 1rem;
+  align-items: self-start;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1rem;  
+  row-gap: 1rem;
+  align-items: self-start;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 1rem;  
+  row-gap: 1rem;
+  align-items: self-start;
+}
+
+.grid--nogap {
+  column-gap: 0;  
+  row-gap: 0;
+}
+
+// Column
+.colspan-2 {
+  grid-column: span 2;
+}
+
+.colspan-3 {
+  grid-column: span 3;
+}
+
+.colspan-4 {
+  grid-column: span 4;
+}
+
+// Row 
+.rowspan-2 {
+  grid-row: span 2;
+}
+
+.rowspan-3 {
+  grid-row: span 3;
+}
+
+.rowspan-4 {
+  grid-row: span 4;
+}
+

@@ -1,0 +1,117 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+
+const colors = [
+  "primary",
+  "secondary",
+  "success",
+  "danger",
+  "info",
+  "warning",
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "teal",
+  "cyan",
+  "blue",
+  "indigo",
+];
+---
+
+<HorizontalLayout title="Badges | Darki Admin">
+  <PageHeader pretitle="Element" title="Badges" />
+  <PageBody>
+    <div class="card mb-lg">
+      <div class="card__header">
+        <span class="card__title">Colors</span>
+      </div>
+      <div class="card__body">
+        <div class="mb-lg">
+          {
+            colors.map((c) => (
+              <span class={"mr-sm badge badge--" + c}>{c}</span>
+            ))
+          }
+        </div>
+        <div class="title mb-md">Outline</div>
+        <div class="mb-lg">
+          {
+            colors.map((c) => (
+              <span class={"mr-sm badge badge--outline badge--" + c}>{c}</span>
+            ))
+          }
+        </div>
+        <div class="title mb-md">Empty</div>
+        <div>
+          {colors.map((c) => <span class={"mr-sm badge badge--" + c} />)}
+        </div>
+      </div>
+    </div>
+    <div class="card mb-xxl">
+      <div class="card__header">
+        <span class="card__title">Example</span>
+      </div>
+      <div class="card__body">
+        <div class="grid-2">
+          <div>
+            <h1 class="text-h1 mb-md">
+              Heading <span class="badge badge--red">h1</span>
+            </h1>
+            <h2 class="text-h2 mb-md">
+              Heading <span class="badge badge--orange">h2</span>
+            </h2>
+            <h3 class="text-h3 mb-md">
+              Heading <span class="badge badge--yellow">h3</span>
+            </h3>
+            <h4 class="text-h4 mb-md">
+              Heading <span class="badge badge--green">h4</span>
+            </h4>
+            <h5 class="text-h5 mb-md">
+              Heading <span class="badge badge--teal">h5</span>
+            </h5>
+            <h6 class="text-h6 mb-md">
+              Heading <span class="badge badge--cyan">h6</span>
+            </h6>
+          </div>
+          <div>
+            <div class="mb-lg">
+              <button class="button">
+                Bulk actions <span class="badge badge--cyan ml-md">8</span>
+              </button>
+              <button class="button">
+                Notification<span class="badge badge--notification badge--red"
+                ></span>
+              </button>
+            </div>
+            <div>
+              <div class="dropdown is-active">
+                <div class="dropdown__trigger">
+                  <button
+                    class="button"
+                    aria-haspopup="true"
+                    aria-controls="dropdown1">Dropdown</button
+                  >
+                </div>
+                <div class="dropdown__menu" id="dropdown1" role="menu">
+                  <div class="dropdown__content">
+                    <a href="#" class="dropdown__item"
+                      >Do action <span class="badge badge--cyan ml-auto">8</span
+                      ></a
+                    >
+                    <a href="#" class="dropdown__item is-active"
+                      >Confirm <span class="badge badge--green ml-auto"
+                      ></span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </PageBody>
+</HorizontalLayout>

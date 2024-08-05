@@ -1,0 +1,74 @@
+// ✨ Dropdowns
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  &.is-active > .dropdown__menu {
+    display: block;
+  }
+}
+
+.dropdown__menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + .5rem);
+  display: none;
+  z-index: 100;
+}
+
+.dropdown__content {
+  background-color: brighten($bg-elevated, 1);
+  border: 1px solid $border-color;
+  box-shadow: $shadow;
+  padding: .25rem .5rem;
+  font-size: .875rem;
+  border-radius: 4px;
+}
+
+.dropdown__divider {
+  border: 1px solid brighten($border-color, 1);
+  border-width: 0 0 1px 0;
+  margin: .25rem -.5rem;
+}
+
+.dropdown__item {
+  display: flex;
+  align-items: center;
+  min-width: 10rem;
+  color: $white;
+  padding: 0.5rem 1rem;
+  margin: 0 -.5rem;
+
+  &:hover {
+    background-color: $bg-elevated;
+  }
+}
+
+.dropdown--right {
+  .dropdown__menu {
+    right: 0;
+    left: auto;
+  }
+}
+
+.dropdown--up {
+  .dropdown__menu {
+    bottom: calc(100% + .5rem);
+    top: auto;
+  }
+}
+
+.dropdown--hoverable {
+  &:hover .dropdown__menu {
+    display: block;
+  }
+
+  .dropdown__menu::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -.5rem;
+    height: .5rem;
+  }
+}

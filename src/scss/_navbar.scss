@@ -1,0 +1,134 @@
+// ✨ Navbar
+.navbar {
+  border-bottom: 1px solid $border-color;
+  background-color: $bg-elevated;
+  box-shadow: $shadow;
+  min-height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4px 0;
+
+  a {
+    color: $text;
+    transition: color 200ms;
+
+    &:hover,
+    &:focus {
+      color: $text-secondary;
+    }
+  }
+
+  &-brand {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &-logo {
+    width: 28px;
+    height: 28px;
+    margin-right: 0.5rem;
+  }
+
+  &-toggler {
+    display: none;
+  }
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+
+  > .navbar-item:not(:last-child),
+  > .navbar-link:not(:last-child) {
+    margin-right: $gap;
+  }
+}
+
+.navbar-item,
+.navbar-link {
+  min-height: 32px;
+  min-width: 32px;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-link--icon > svg {
+  font-size: 1.25rem;
+}
+
+.navbar-link-icon {
+  margin-right: 8px;
+  color: $text-secondary;
+}
+
+.navbar-item.is-active {
+  .navbar-link-icon {
+    color: color(primary);
+  }
+}
+
+.navbar-item--with-dropdown > .navbar-link::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgc3Ryb2tlPSIjRkZGRkZGIj48cG9seWxpbmUgcG9pbnRzPSI2IDkgMTIgMTUgMTggOSIvPjwvc3ZnPg==");
+  background-repeat: no-repeat;
+  margin-left: .25rem;
+  opacity: .5;
+}
+
+.navbar-item-dropdown {
+  position: absolute;
+  background-color: $bg-elevated;
+  top: calc(100% + 8px - 1px);
+  left: 0;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: $border-color;
+  border-radius: 0 0 4px 4px;
+  box-shadow: $shadow;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms;
+  white-space: nowrap;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 8px;
+    left: 1px;
+    right: 1px;
+    top: -8px;
+  }
+
+  .navbar-item:hover &, .navbar-item:focus-within & {
+    opacity: 1;
+    pointer-events: initial;
+  }
+
+  + .navbar-link::after {
+    content: ">";
+    display: block;
+    font-size: 10px;
+    line-height: 10px;
+    height: 10px;
+    width: 10px;
+    margin-left: 4px;
+    margin-top: 4px;
+    text-align: center;
+    transform: rotate(90deg);
+  }
+}

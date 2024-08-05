@@ -1,0 +1,219 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+
+const persons = [
+  {
+    name: "Kim Conn",
+    email: "Sophia73@fakemail.com",
+    job: "Designer",
+    status: "Active",
+  },
+  {
+    name: "Mrs. Gerard Hilpert",
+    email: "Zachary69@fakemail.com",
+    job: "Director",
+    status: "Active",
+  },
+  {
+    name: "Angelo Trantow",
+    email: "Ken.Mann@fakemail.com",
+    job: "Specialist",
+    status: "Inactive",
+  },
+  {
+    name: "Tamara Balistreri",
+    email: "Tamara41@fakemail.com",
+    job: "Architect",
+    status: "Inactive",
+  },
+  {
+    name: "Dr. Erica Pfeffer",
+    email: "Quinn_Feil@fakemail.com",
+    job: "Supervisor",
+    status: "Active",
+  },
+];
+---
+
+<HorizontalLayout title="Tables | Darki Admin">
+  <PageHeader pretitle="Element" title="Tables" />
+  <PageBody>
+    <div class="grid-2 mb-xxl">
+      <div class="table-card">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Job</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              persons.map((p) => (
+                <tr>
+                  <td>{p.name}</td>
+                  <td>{p.email}</td>
+                  <td>{p.job}</td>
+                  <td />
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <div class="table-card">
+        <table class="table table--striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Job</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              persons.map((p) => (
+                <tr>
+                  <td>{p.name}</td>
+                  <td>{p.email}</td>
+                  <td>{p.job}</td>
+                  <td>
+                    <a href="#">Edit</a>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <div class="table-card colspan-2">
+        <div class="table-card__header">
+          <span class="text-title">Users</span>
+          <div class="select">
+            <select name="status" id="status">
+              <option value="">All</option>
+              <option value="1">Active</option>
+              <option value="0">Inactive</option>
+            </select>
+          </div>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name<a href="#" class="table__sort is-asc"></a></th>
+              <th>Email<a href="#" class="table__sort"></a></th>
+              <th>Job<a href="#" class="table__sort"></a></th>
+              <th>Status</th>
+              <th style="width: 40px"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              persons.map((p, i) => (
+                <tr>
+                  <td>{p.name}</td>
+                  <td>{p.email}</td>
+                  <td>{p.job}</td>
+                  <td>
+                    <span
+                      class={
+                        "mr-sm badge badge--" +
+                        (p.status == "Active" ? "green" : "red")
+                      }
+                    />
+                    {p.status}
+                  </td>
+                  <td>
+                    <div
+                      class={
+                        "dropdown dropdown--right " +
+                        (i > 1 ? "dropdown--up" : "")
+                      }
+                    >
+                      <div class="dropdown__trigger">
+                        <a
+                          href="#"
+                          class="text-lg text-default flex"
+                          title="Actions"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="1em"
+                            height="1em"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <circle cx="12" cy="12" r="1" />
+                            <circle cx="19" cy="12" r="1" />
+                            <circle cx="5" cy="12" r="1" />
+                          </svg>
+                        </a>
+                      </div>
+                      <div
+                        class="dropdown__menu"
+                        id={"dropdown-" + i}
+                        role="menu"
+                      >
+                        <div class="dropdown__content">
+                          <a href="#" class="dropdown__item">
+                            Detail
+                          </a>
+                          <a href="#" class="dropdown__item is-active">
+                            Delete
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+        <div class="table-card__footer">
+          <div class="text-secondary text-md">Showing 1-5 of 12 entries</div>
+          <ul class="pagination">
+            <li class="pagination__prev is-disabled">
+              <a href="#" class="pagination__link"></a>
+            </li>
+            <li class="pagination__item is-active">
+              <a href="#" class="pagination__link">1</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">2</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#" class="pagination__link">3</a>
+            </li>
+            <li class="pagination__next">
+              <a href="#" class="pagination__link"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      document
+        .querySelectorAll(".dropdown__trigger")
+        .forEach(attachToggleDropdown);
+
+      function attachToggleDropdown($trigger) {
+        $trigger.addEventListener("click", function (e) {
+          e.stopPropagation();
+          e.preventDefault();
+          e.target.closest(".dropdown").classList.toggle("is-active");
+          e.target.blur();
+        });
+      }
+    </script>
+  </PageBody>
+</HorizontalLayout>

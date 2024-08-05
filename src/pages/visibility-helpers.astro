@@ -1,0 +1,25 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+---
+
+<HorizontalLayout title="Visibility helpers | Darki Admin">
+  <PageHeader title="Visibility helpers" />
+  <PageBody>
+    <p class="text-p mb-xl">Show/hide element using `display` property.</p>
+    <div class="card mb-xxl">
+      <div class="card__body content">
+        <h3>Show</h3>
+        <p>Use the following <code>display</code> classes to show:</p>
+        <ul>
+          <li><code>block</code></li>
+          <li><code>inline-block</code></li>
+          <li><code>flex</code></li>
+          <li><code>inline-flex</code></li>
+        </ul>
+        <h3>Hide</h3>
+        <p>Use <code>none</code> class to hide.</p>
+    </div>
+  </PageBody>
+</HorizontalLayout>

@@ -1,0 +1,277 @@
+// ✨ Layout
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.none {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: flex;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.row {
+  display: flex;
+
+  > * {
+    min-width: 0;
+  }
+}
+
+.col-grow {
+  flex-grow: 1;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+@each $name, $width in $widths {
+  .w-#{$name} {
+    width: $width;
+  }
+}
+
+.h-full {
+  height: 100%;
+}
+
+// ✨ Spacing
+$spacing-attrs: (
+  "m": "margin",
+  "my": "margin",
+  "mx": "margin",
+  "mt": "margin-top",
+  "mr": "margin-right",
+  "mb": "margin-bottom",
+  "ml": "margin-left",
+  "p": "padding",
+  "py": "padding",
+  "px": "padding",
+  "pt": "padding-top",
+  "pr": "padding-right",
+  "pb": "padding-bottom",
+  "pl": "padding-left",
+);
+
+@each $name, $attr in $spacing-attrs {
+  @each $space, $size in $spaces {
+    .#{$name}-#{$space} {
+      @if $name == "my" or $name == "py" {
+        #{$attr}-top: $size;
+        #{$attr}-bottom: $size;
+      } @else if $name == "mx" or $name == "px" {
+        #{$attr}-left: $size;
+        #{$attr}-right: $size;
+      } @else {
+        #{$attr}: $size;
+      }
+    }
+  }
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+// ✨ Typography
+@each $name, $rules in $typography-scales {
+  .text-#{$name} {
+    @each $prop, $value in $rules {
+      #{$prop}: #{$value};
+    }
+  }
+}
+
+.text-h1,
+.text-h2,
+.text-h3,
+.text-h4,
+.text-h5,
+.text-h6,
+.text-title {
+  font-weight: $font-semibold;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.font-bold {
+  font-weight: $font-bold;
+}
+
+.font-semibold {
+  font-weight: $font-semibold;
+}
+
+.font-normal {
+  font-weight: $font-normal;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-italic {
+  font-style: italic;  
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-strikethrough {
+  text-decoration: line-through;
+}
+
+// ✨ Others
+$sides: (
+  t: "top",
+  r: "right",
+  b: "bottom",
+  l: "left",
+);
+
+.rounded {
+  border-radius: 2px;
+}
+
+.rounded-lg {
+  border-radius: 4px;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.shadow {
+  box-shadow: $shadow;
+}
+
+.border {
+  border: 1px solid $border-color;
+}
+
+.border-none {
+  border-width: 0;
+}
+
+@each $name, $side in $sides {
+  .border-#{$name} {
+    border-#{$side}: 1px solid $border-color;
+  }
+
+  .border-#{$name}-none {
+    border-#{$side}-width: 0;
+  }
+}
+
+// ✨ Color
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+
+  .bg-#{$name}-alt {
+    background-color: mix($color, $bg, 15%);
+  }
+
+  .text-#{$name} {
+    color: $color;
+  }
+
+  .border-#{$name} {
+    border-color: $color;
+  }
+}
+
+.text-default {
+  color: $text;
+}
+
+.border-default {
+  border-color: $border-color;
+}

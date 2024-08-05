@@ -1,0 +1,214 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+---
+
+<HorizontalLayout title="Typography helpers | Darki Admin">
+  <PageHeader title="Typography helpers" />
+  <PageBody>
+    <p class="text-p mb-xl">Change the style of text.</p>
+    <div class="card mb-xxl">
+      <div class="card__body content">
+        <h3>Size</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Font-size</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>text-h1</code></td>
+              <td><code>2rem</code>/<code>32px</code></td>
+              <td><span class="text-h1">Heading 1</span></td>
+            </tr>
+            <tr>
+              <td><code>text-h2</code></td>
+              <td><code>1.5rem</code>/<code>24px</code></td>
+              <td><span class="text-h2">Heading 2</span></td>
+            </tr>
+            <tr>
+              <td><code>text-h3</code></td>
+              <td><code>1.25rem</code>/<code>20px</code></td>
+              <td><span class="text-h3">Heading 3</span></td>
+            </tr>
+            <tr>
+              <td><code>text-h4</code></td>
+              <td><code>1.125rem</code>/<code>18px</code></td>
+              <td><span class="text-h4">Heading 4</span></td>
+            </tr>
+            <tr>
+              <td><code>text-h5</code></td>
+              <td><code>1rem</code>/<code>16px</code></td>
+              <td><span class="text-h5">Heading 5</span></td>
+            </tr>
+            <tr>
+              <td><code>text-h6</code></td>
+              <td><code>1rem</code>/<code>16px</code></td>
+              <td><span class="text-h6">Heading 6</span></td>
+            </tr>
+            <tr>
+              <td><code>text-title</code></td>
+              <td><code>1rem</code>/<code>16px</code></td>
+              <td><span class="text-title">Title</span></td>
+            </tr>
+            <tr>
+              <td><code>text-subtitle</code></td>
+              <td><code>0.8rem</code>/<code>12.8px</code></td>
+              <td><span class="text-subtitle">Subtitle</span></td>
+            </tr>
+            <tr>
+              <td><code>text-p</code></td>
+              <td><code>0.875rem</code>/<code>14px</code></td>
+              <td><span class="text-p">Paragraph</span></td>
+            </tr>
+            <tr>
+              <td><code>text-lg</code></td>
+              <td><code>1.125rem</code>/<code>18px</code></td>
+              <td><span class="text-lg">Large</span></td>
+            </tr>
+            <tr>
+              <td><code>text-normal</code></td>
+              <td><code>1rem</code>/<code>16px</code></td>
+              <td><span class="text-normal">Normal/Default</span></td>
+            </tr>
+            <tr>
+              <td><code>text-md</code></td>
+              <td><code>0.875rem</code>/<code>14px</code></td>
+              <td><span class="text-md">Medium</span></td>
+            </tr>
+            <tr>
+              <td><code>text-sm</code></td>
+              <td><code>0.8rem</code>/<code>12.8px</code></td>
+              <td><span class="text-sm">Small</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Weight</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Font-weight</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>font-bold</code></td>
+              <td><code>600</code></td>
+              <td><span class="font-bold">Bold</span></td>
+            </tr>
+            <tr>
+              <td><code>font-semibold</code></td>
+              <td><code>500</code></td>
+              <td><span class="font-semibold">Semibold</span></td>
+            </tr>
+            <tr>
+              <td><code>font-normal</code></td>
+              <td><code>400</code></td>
+              <td><span class="font-normal">Normal</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Transformation</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>text-capitalize</code></td>
+              <td
+                >Example of a <span class="text-capitalize">capitalize</span> text.</td
+              >
+            </tr>
+            <tr>
+              <td><code>text-uppercase</code></td>
+              <td
+                >Example of a <span class="text-uppercase">uppercase</span> text.</td
+              >
+            </tr>
+            <tr>
+              <td><code>text-lowercase</code></td>
+              <td
+                >Example of a <span class="text-lowercase">lowercase</span> text.</td
+              >
+            </tr>
+            <tr>
+              <td><code>text-italic</code></td>
+              <td>Example of a <span class="text-italic">italic</span> text.</td
+              >
+            </tr>
+            <tr>
+              <td><code>text-underline</code></td>
+              <td
+                >Example of a <span class="text-underline">underline</span> text.</td
+              >
+            </tr>
+            <tr>
+              <td><code>text-strikethrough</code></td>
+              <td
+                >Example of a <span class="text-strikethrough"
+                  >strikethrough</span
+                > text.</td
+              >
+            </tr>
+          </tbody>
+        </table>
+        <h3>Alignment</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>text-left</code></td>
+              <td class="text-left">left</td>
+            </tr>
+            <tr>
+              <td><code>text-center</code></td>
+              <td class="text-center">center</td>
+            </tr>
+            <tr>
+              <td><code>text-right</code></td>
+              <td class="text-right">right</td>
+            </tr>
+            <tr>
+              <td><code>text-justify</code></td>
+              <td class="text-justify">justify</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Font family</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>font-primary</code></td>
+              <td class="text-left">Use primary font <code>$family-primary</code></td>
+            </tr>
+            <tr>
+              <td><code>font-mono</code></td>
+              <td class="text-center">Use monospace font <code>$family-monospace</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </PageBody>
+</HorizontalLayout>

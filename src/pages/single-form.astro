@@ -1,0 +1,107 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+---
+
+<HorizontalLayout title="Single form | Darki Admin">
+  <ul class="breadcrumb mt-lg">
+    <li class="breadcrumb__item"><a href="/">Home</a></li>
+    <li class="breadcrumb__item"><a href="/">Users</a></li>
+    <li class="breadcrumb__item"><span>New</span></li>
+  </ul>
+  <PageHeader title="Single form" />
+  <PageBody>
+    <div class="card colspan-2 mb-xxl w-lg">
+      <div class="card__body">
+        <form class="form form--horizontal">
+          <div class="field">
+            <label for="fullname" class="field__label">Full Name</label>
+            <div class="field__control">
+              <input
+                id="fullname"
+                class="input"
+                type="text"
+                placeholder="Enter full name"
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email" class="field__label">Email</label>
+            <div class="field__control">
+              <span class="field__control-icon">✉️</span>
+              <input
+                id="email"
+                class="input"
+                type="email"
+                placeholder="Enter email address"
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="username" class="field__label">Username</label>
+            <div class="field__control">
+              <span class="field__control-icon">🙍‍♂️</span>
+              <input
+                id="username"
+                class="input"
+                type="text"
+                placeholder="Choose a username"
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="phone" class="field__label">Phone Number</label>
+            <div class="field__control">
+              <span class="field__control-icon">📞</span>
+              <input
+                id="phone"
+                class="input"
+                type="tel"
+                placeholder="Enter phone number"
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="description" class="field__label">Description</label>
+            <div class="field__control">
+              <textarea
+                id="description"
+                class="textarea"
+                placeholder="Enter user description"></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="status" class="field__label">Status</label>
+            <div class="field__control">
+              <div class="select">
+                <select id="status">
+                  <option value="">Select status</option>
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card__footer">
+        <div class="level">
+          <div class="level__left">
+            <a href="/" class="button button--text" type="submit">Cancel</a>
+          </div>
+          <div class="level__right">
+            <button class="button button--primary" type="submit"
+              >Create User</button
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </PageBody>
+</HorizontalLayout>

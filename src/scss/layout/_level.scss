@@ -1,0 +1,16 @@
+// ✨ Level
+.level {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex: auto;
+}
+
+.level__left {
+  margin-right: auto;
+}
+
+.level__right {
+  margin-left: auto;
+}

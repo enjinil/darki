@@ -1,0 +1,14 @@
+---
+const { title, pretitle } = Astro.props
+---
+<div class="page-header">
+  <div class="level">
+    <div class="level__left">
+      <div class="page-pretitle">{pretitle}</div>
+      <div class="page-title">{title}</div>
+    </div>
+    <div class="level__right">
+      <slot/>
+    </div>
+  </div>
+</div>

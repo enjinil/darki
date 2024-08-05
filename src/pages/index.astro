@@ -1,0 +1,348 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+---
+
+<HorizontalLayout title="Darki Admin">
+  <PageHeader pretitle="Admin" title="Dashboard">
+    <div class="button-group">
+      <a href="#" class="button button--primary">New Campaign</a>
+      <a href="#" class="button button--primary">New Product</a>
+      <div class="select ml-md">
+        <select>
+          <option>May 2024</option>
+          <option>Juni 2024</option>
+          <option>July 2024</option>
+        </select>
+      </div>
+      <a href="#" class="button">Download Report</a>
+    </div>
+  </PageHeader>
+  <PageBody>
+    <div class="grid-4 mb-xxl">
+      <div class="grid-2 colspan-2">
+        <div class="card">
+          <div class="card__body">
+            <div class="stat">
+              <div class="stat-icon bg-success">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><line x1="12" y1="1" x2="12" y2="23"></line><path
+                    d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                  ></path></svg
+                >
+              </div>
+              <div class="stat-body">
+                <div class="stat-title">
+                  <span class="stat-number">256</span> sales
+                </div>
+                <div class="stat-subtitle">16 on process sales</div>
+              </div>
+              <span class="stat-info text-success" title="Up 10% last 7 days">
+                ⤴ 10%
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__body">
+            <div class="stat">
+              <div class="stat-icon bg-danger">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                  ></path><line x1="3" y1="6" x2="21" y2="6"></line><path
+                    d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+              </div>
+              <div class="stat-body">
+                <div class="stat-title">
+                  <span class="stat-number">54</span> orders
+                </div>
+                <div class="stat-subtitle">7 waiting for response</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__body">
+            <div class="stat">
+              <div class="stat-icon rounded border border-info text-info">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <div class="stat-body">
+                <div class="stat-title">
+                  <span class="stat-number">3.442</span> visitors
+                </div>
+                <div class="stat-subtitle">2.291 unique</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__body">
+            <div class="stat">
+              <div class="stat-icon rounded border border-warning text-warning">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="1" y="3" width="15" height="13"></rect>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                  <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                  <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                </svg>
+              </div>
+              <div class="stat-body">
+                <div class="stat-title">
+                  <span class="stat-number">342</span> delivered
+                </div>
+                <div class="stat-subtitle">for last 30 days</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card colspan-2">
+        <div class="card__header">
+          <div class="level">
+            <div class="level__left">
+              <span class="card__title">Recent activities</span>
+            </div>
+            <div class="level__right">
+              <a href="#" class="text-sm">View more</a>
+            </div>
+          </div>
+        </div>
+        <ul class="list list--sm">
+          <li class="list__item">
+            <div class="level">
+              <div class="level__left">
+                Received payment 283.000 for <a href="#">#INV23010</a>
+              </div>
+              <div class="level__right text-secondary">05/07/2024 - 09:00</div>
+            </div>
+          </li>
+          <li class="list__item">
+            <div class="level">
+              <div class="level__left">New order <a href="#">#INV23019</a></div>
+              <div class="level__right text-secondary">03/07/2024 - 22:00</div>
+            </div>
+          </li>
+          <li class="list__item">
+            <div class="level">
+              <div class="level__left">
+                Complain message from <a href="#">#INV23000</a>
+              </div>
+              <div class="level__right text-secondary">02/07/2024 - 08:12</div>
+            </div>
+          </li>
+          <li class="list__item">
+            <div class="level">
+              <div class="level__left">
+                Request for return from <a href="#">#INV20210</a>
+              </div>
+              <div class="level__right text-secondary">01/07/2024 - 06:01</div>
+            </div>
+          </li>
+          <li class="list__item">
+            <div class="level">
+              <div class="level__left">
+                New order <a href="#">#INV23200</a>
+              </div>
+              <div class="level__right text-secondary">01/07/2024 - 13:00</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="grid-3 colspan-4">
+        <div class="card colspan-2">
+          <div class="card__header">
+            <div class="card__title">Most popular products</div>
+          </div>
+          <div class="table-container">
+            <table class="table table-compact">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th class="text-right">Visitors</th>
+                  <th class="text-right">Unique</th>
+                  <th class="text-right">Conversion %</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Vender Japan Jean-Ken Johnny Jaguar 🔥</td>
+                  <td class="text-right">773</td>
+                  <td class="text-right">232</td>
+                  <td class="text-right">81</td>
+                </tr>
+                <tr>
+                  <td>BOZZ Katana 20 Watt Amp</td>
+                  <td class="text-right">720</td>
+                  <td class="text-right">412</td>
+                  <td class="text-right">123</td>
+                </tr>
+                <tr>
+                  <td>Squire Statocaster</td>
+                  <td class="text-right">522</td>
+                  <td class="text-right">152</td>
+                  <td class="text-right">90</td>
+                </tr>
+                <tr>
+                  <td>Bibson Les Paul 50s</td>
+                  <td class="text-right">420</td>
+                  <td class="text-right">129</td>
+                  <td class="text-right">52</td>
+                </tr>
+                <tr>
+                  <td>Relix Multieffect</td>
+                  <td class="text-right">392</td>
+                  <td class="text-right">110</td>
+                  <td class="text-right">62</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card colspan-1">
+          <div class="card__header">
+            <span class="card__title">Projects</span>
+          </div>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td width="50%">
+                  <div class="level">
+                    <div class="level__left">
+                      <div class="text-sm">Task Kanban</div>
+                    </div>
+                    <div class="level__right">
+                      <span class="badge badge--info">60%</span>
+                    </div>
+                  </div>
+                </td>
+                <td width="50%">
+                  <div class="progress progress--info">
+                    <div class="progress__fill" style="width: 60%"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td width="50%">
+                  <div class="level">
+                    <div class="level__left">
+                      <div class="text-sm">Accounting</div>
+                    </div>
+                    <div class="level__right">
+                      <span class="badge badge--info">40%</span>
+                    </div>
+                  </div>
+                </td>
+                <td width="50%">
+                  <div class="progress progress--info">
+                    <div class="progress__fill" style="width: 40%"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td width="50%">
+                  <div class="level">
+                    <div class="level__left">
+                      <div class="text-sm">Ads Manager</div>
+                    </div>
+                    <div class="level__right">
+                      <span class="badge badge--success">90%</span>
+                    </div>
+                  </div>
+                </td>
+                <td width="50%">
+                  <div class="progress progress--success">
+                    <div class="progress__fill" style="width: 90%"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td width="50%">
+                  <div class="level">
+                    <div class="level__left">
+                      <span class="text-sm">Payroll Management</span>
+                    </div>
+                    <div class="level__right">
+                      <span class="badge badge--danger">10%</span>
+                    </div>
+                  </div>
+                </td>
+                <td width="50%">
+                  <div class="progress progress--danger">
+                    <div class="progress__fill" style="width: 10%"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td width="50%">
+                  <div class="level">
+                    <div class="level__left">
+                      <span class="text-sm">Presence Tracker</span>
+                    </div>
+                    <div class="level__right">
+                      <span class="badge badge--warning">25%</span>
+                    </div>
+                  </div>
+                </td>
+                <td width="50%">
+                  <div class="progress progress--warning">
+                    <div class="progress__fill" style="width: 25%"></div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </PageBody>
+</HorizontalLayout>

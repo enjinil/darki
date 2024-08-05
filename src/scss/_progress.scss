@@ -1,0 +1,24 @@
+// ✨ Progress
+.progress {
+  display: block;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $bg;
+  overflow: hidden;
+  box-shadow: $shadow;
+  border: 1px solid $border-color;
+}
+
+.progress__fill {
+  background-color: $text;
+  height: 100%;
+  box-shadow: $shadow;
+}
+
+// Variant
+@each $name, $color in $colors {
+  .progress--#{$name} > .progress__fill {
+    background-color: $color;
+  }
+}

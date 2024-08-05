@@ -1,0 +1,6 @@
+---
+const {centered} = Astro.props
+---
+<div class={["page-body", centered ? "page-body--centered" : ""].join(" ")}>
+  <slot/>
+</div>

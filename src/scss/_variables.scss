@@ -1,0 +1,144 @@
+// Colors
+$black: hsl(207, 31%, 11%);
+$black-shade: hsl(206, 33%, 9%);
+$black-tint: hsl(205, 18%, 19%);
+$white: hsl(201, 24%, 84%);
+
+$colors: (
+  primary: hsl(191, 79%, 40%),
+  secondary: hsl(215, 16%, 47%),
+  success: hsl(144, 61%, 36%),
+  danger: hsl(0, 59%, 49%),
+  info: hsl(201, 98%, 39%),
+  warning: hsl(48, 96%, 40%),
+  "red": hsl(0, 72%, 51%),
+  "orange": hsl(24, 95%, 48%),
+  "yellow": hsl(48, 96%, 40%),
+  "green": hsl(142, 76%, 36%),
+  "teal": hsl(173, 84%, 32%),
+  "cyan": hsl(190, 90%, 37%),
+  "blue": hsl(222, 84%, 53%),
+  "indigo": hsl(243, 75%, 59%),
+);
+
+$bg: $black-shade;
+$bg-elevated: $black;
+$border-color: $black-tint;
+$border-color-hover: mix($border-color, map_get($colors, primary), 80%);
+$text: $white;
+$text-secondary: map_get($colors, secondary);
+$link: map_get($colors, primary);
+$shadow: 0 1px 2px 0 rgb(0 0 0 / 0.2);
+$shadow-elevated: 0 1px 4px 0 rgb(0 0 0 / 0.4);
+$shadow-inset: inset 1px 2px rgb(0 0 0 / 0.2);
+$text-shadow: 0 1px 2px rgb(0 0 0 / 0.2);
+
+
+// Typography
+$family-primary: "Noto", "Segoe UI", "Roboto", "Ubuntu", "Helvetica Neue",
+  "Helvetica", "Arial", sans-serif !default;
+$family-monospace: "Inconsolata", "Hack", "SF Mono", "Roboto Mono",
+  "Source Code Pro", "Ubuntu Mono", monospace !default;
+
+$font-size: 16px;
+$font-normal: 400;
+$font-semibold: 500;
+$font-bold: 600;
+
+$tracking-tight:	-0.025em;
+$tracking-normal:	0em;
+$tracking-wide:	0.05em;
+
+$typography-scales: (
+  h1: (
+    font-size: 2rem,
+    line-height: 2rem,
+    letter-spacing: $tracking-wide
+  ),
+  h2: (
+    font-size: 1.5rem,
+    line-height: 2rem,
+    letter-spacing: $tracking-wide
+  ),
+  h3: (
+    font-size: 1.25rem,
+    line-height: 2rem,
+    letter-spacing: $tracking-wide
+  ),
+  h4: (
+    font-size: 1.125rem,
+    line-height: 1.5rem,
+    letter-spacing: $tracking-wide
+  ),
+  h5: (
+    font-size: 1rem,
+    line-height: 1.5rem,
+    letter-spacing: $tracking-wide
+  ),
+  h6: (
+    font-size: 1rem,
+    line-height: 1.125rem,
+    letter-spacing: $tracking-wide
+  ),
+  title: (
+    font-size: 1rem,
+    line-height: 1.125rem,
+    letter-spacing: $tracking-wide
+  ),
+  subtitle: (
+    font-size: 0.8rem,
+    line-height: 1rem,
+  ),
+  p: (
+    font-size: 0.875rem,
+    line-height: 1.5rem,
+  ),
+  lg: (
+    font-size: 1.125rem,
+  ),
+  normal: (
+    font-size: 1rem,
+    line-height: 1.125rem,
+  ),
+  md: (
+    font-size: 0.875rem,
+    line-height: 1.125rem,
+  ),
+  sm: (
+    font-size: 0.8rem,
+    line-height: 1rem,
+  ),
+);
+
+// Layout
+$gap: 1rem;
+$field-height: 2.25rem;
+$page-min-width: 1024px;
+
+$widths: (
+  full: 100%,
+  25: 25%,
+  30: 30%,
+  40: 40%,
+  50: 50%,
+  60: 60%,
+  70: 70%,
+  75: 75%,
+  sm: 352px,
+  md: 480px,
+  lg: 960px,
+  1rem: 1rem,
+  2rem: 2rem,
+  4rem: 4rem,
+  8rem: 8rem,
+  16rem: 16rem,
+  32rem: 32rem,
+);
+
+$spaces: (
+  sm: 0.25rem,
+  md: 0.5rem,
+  lg: 1rem,
+  xl: 2rem,
+  xxl: 4rem,
+);

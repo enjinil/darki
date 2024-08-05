@@ -1,0 +1,398 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+---
+
+<HorizontalLayout title="Forms | Darki Admin">
+  <PageHeader pretitle="Element" title="Forms" />
+  <PageBody>
+    <div class="grid-4 mb-xxl">
+      <!-- Basic form -->
+      <div class="card colspan-2">
+        <div class="card__header">
+          <span class="card__title">Basic form</span>
+        </div>
+        <div class="card__body">
+          <div class="field">
+            <label for="" class="field__label">Name</label>
+            <div class="field__control">
+              <input class="input" type="text" placeholder="Text input" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="" class="field__label">Username</label>
+            <div class="field__control">
+              <span class="field__control-icon">🙍‍♂️</span>
+              <input
+                class="input"
+                type="text"
+                placeholder="Text input"
+                value="KamikazeBoy"
+              />
+            </div>
+            <div class="field__message text-success">Username is available</div>
+          </div>
+          <div class="field is-invalid">
+            <label for="" class="field__label">Email</label>
+            <div class="field__control">
+              <span class="field__control-icon">✉️</span>
+              <input
+                class="input"
+                type="text"
+                placeholder="Text input"
+                value="kamikazeboy@"
+              />
+            </div>
+            <div class="field__message text-danger">Email is invalid</div>
+          </div>
+          <div class="field">
+            <label for="" class="field__label">Role</label>
+            <div class="field__control">
+              <div class="select">
+                <select>
+                  <option value="">Select role</option>
+                  <option value="lead">Lead</option>
+                  <option value="manager">Manager</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="" class="field__label">Permissions</label>
+            <div class="field__control">
+              <div class="select">
+                <select multiple>
+                  <option value="1">Create</option>
+                  <option value="2">Read</option>
+                  <option value="3">Update</option>
+                  <option value="4">Delete</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="" class="field__label">Bio</label>
+            <div class="field__control">
+              <textarea class="textarea"></textarea>
+            </div>
+          </div>
+          <div class="field">
+            <label for="" class="field__label">Phone Number (Disabled)</label>
+            <div class="field__control">
+              <input class="input" type="text" value="+123-456-789" disabled />
+            </div>
+          </div>
+          <div class="field">
+            <div class="field__control">
+              <label class="checkbox">
+                <input type="checkbox" />
+                <div>I agree to the <a href="#"> terms and conditions</a></div>
+              </label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="field__control">
+              <label class="radio">
+                <input type="radio" name="question" />
+                <div>Yes</div>
+              </label>
+              <label class="radio">
+                <input type="radio" name="question" />
+                <div>No</div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="card__footer">
+          <div class="level">
+            <div class="level__left">
+              <button class="button button--text">Cancel</button>
+            </div>
+            <div class="level__right">
+              <button class="button button--primary">Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Custom form elements -->
+      <div class="card colspan-2">
+        <div class="card__header">
+          <span class="card__title">Custom form elements</span>
+        </div>
+        <div class="card__body">
+          <div class="field">
+            <label class="field__label">Input group</label>
+            <div class="field__control field__control--input-group mb-sm">
+              <input
+                class="input text-right"
+                type="text"
+                placeholder="username"
+              />
+              <div class="input-append">@darki.mail</div>
+            </div>
+            <div class="field__control field__control--input-group mb-sm">
+              <div class="input-prepend">@</div>
+              <input class="input" type="text" placeholder="username" />
+            </div>
+            <div class="field__control field__control--input-group">
+              <div class="input-prepend">https://</div>
+              <input class="input" type="text" placeholder="subdomain" />
+              <div class="input-append">.darki.site</div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label">Password</label>
+            <div class="field__control field__control--input-group">
+              <input class="input" type="password" value="123456" />
+              <div class="input-append">
+                <a href="#">Show password</a>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label">Selecbox</label>
+            <div class="field__control">
+              <div class="selecbox">
+                <div class="selectbox__item">
+                  <input type="radio" name="selectbox" />
+                  <span>ExpressJS</span>
+                </div>
+                <div class="selectbox__item">
+                  <input type="radio" name="selectbox" checked />
+                  <span>NestJS</span>
+                </div>
+                <div class="selectbox__item">
+                  <input type="radio" name="selectbox" />
+                  <span>Phoenix</span>
+                </div>
+                <div class="selectbox__item">
+                  <input type="radio" name="selectbox" />
+                  <span>Laravel</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label">Selectbox multiple</label>
+            <div class="field__control">
+              <div class="selecbox">
+                <div class="selectbox__item">
+                  <input type="checkbox" name="selectbox-multiple" checked />
+                  <span>TypeScript</span>
+                </div>
+                <div class="selectbox__item">
+                  <input type="checkbox" name="selectbox-multiple" checked />
+                  <span>TailwindCSS</span>
+                </div>
+                <div class="selectbox__item">
+                  <input type="checkbox" name="selectbox-multiple" />
+                  <span>Vitest</span>
+                </div>
+                <div class="selectbox__item">
+                  <input type="checkbox" name="selectbox-multiple" />
+                  <span>Docker</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label">Selectrow</label>
+            <div class="field__control">
+              <div class="selectrow">
+                <div class="selectrow__item">
+                  <input type="radio" name="selectrow" />
+                  <div class="flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#23ac59"
+                      class="mr-md"
+                      ><path
+                        d="M560-440q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM280-320q-33 0-56.5-23.5T200-400v-320q0-33 23.5-56.5T280-800h560q33 0 56.5 23.5T920-720v320q0 33-23.5 56.5T840-320H280Zm80-80h400q0-33 23.5-56.5T840-480v-160q-33 0-56.5-23.5T760-720H360q0 33-23.5 56.5T280-640v160q33 0 56.5 23.5T360-400Zm440 240H120q-33 0-56.5-23.5T40-240v-440h80v440h680v80ZM280-400v-320 320Z"
+                      ></path></svg
+                    >
+                    <span>Cash</span>
+                  </div>
+                </div>
+                <div class="selectrow__item">
+                  <input type="radio" name="selectrow" checked />
+                  <div class="flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#e8eaed"
+                      class="mr-md"
+                      ><path
+                        d="M520-120v-80h80v80h-80Zm-80-80v-200h80v200h-80Zm320-120v-160h80v160h-80Zm-80-160v-80h80v80h-80Zm-480 80v-80h80v80h-80Zm-80-80v-80h80v80h-80Zm360-280v-80h80v80h-80ZM180-660h120v-120H180v120Zm-60 60v-240h240v240H120Zm60 420h120v-120H180v120Zm-60 60v-240h240v240H120Zm540-540h120v-120H660v120Zm-60 60v-240h240v240H600Zm80 480v-120h-80v-80h160v120h80v80H680ZM520-400v-80h160v80H520Zm-160 0v-80h-80v-80h240v80h-80v80h-80Zm40-200v-160h80v80h80v80H400Zm-190-90v-60h60v60h-60Zm0 480v-60h60v60h-60Zm480-480v-60h60v60h-60Z"
+                      ></path></svg
+                    >
+                    <span>QRIS</span>
+                  </div>
+                </div>
+                <div class="selectrow__item">
+                  <input type="radio" name="selectrow" />
+                  <div class="flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20px"
+                      viewBox="0 -960 960 960"
+                      width="20px"
+                      fill="#0284c7"
+                      class="mr-md"
+                      ><path
+                        d="M880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720Zm-720 80h640v-80H160v80Zm0 160v240h640v-240H160Zm0 240v-480 480Z"
+                      ></path></svg
+                    >
+                    <span>Credit Card</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label">Selectrow multiple</label>
+            <div class="field__control">
+              <div class="selectrow">
+                <div class="selectrow__item">
+                  <input type="checkbox" name="selectrow-multiple" checked />
+                  <div class="flex">
+                    <span>Lunch</span>
+                  </div>
+                </div>
+                <div class="selectrow__item">
+                  <input type="checkbox" name="selectrow-multiple" />
+                  <div class="flex">
+                    <span>Drink</span>
+                  </div>
+                </div>
+                <div class="selectrow__item">
+                  <input type="checkbox" name="selectrow-multiple" checked />
+                  <div class="flex">
+                    <span>Snack</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label">Datepicker</label>
+            <div class="field__control">
+              <input class="datepicker" data-format="DD/MM/YYYY" type="text" />
+            </div>
+          </div>
+          <div class="field">
+            <label class="field__label">Daterangepicker</label>
+            <div class="field__control">
+              <input
+                class="daterangepicker"
+                data-format="DD/MM/YYYY"
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Row form -->
+      <div class="table-card colspan-3">
+        <div class="table-container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Attribute</th>
+                <th>Type</th>
+                <th style="width:120px">Default</th>
+                <th style="width:40px"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input type="text" class="input w-full" value="name" />
+                </td>
+                <td>
+                  <div class="select w-full">
+                    <select>
+                      <option value="text">text</option>
+                      <option value="integer" selected>integer</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <input type="text" class="input w-full" />
+                </td>
+                <td class="text-right">
+                  <a class="button button--icon" href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      ><polyline points="3 6 5 6 21 6"></polyline><path
+                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                      ></path></svg
+                    >
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" class="input w-full" value="salary" />
+                </td>
+                <td>
+                  <div class="select w-full">
+                    <select>
+                      <option value="text">text</option>
+                      <option value="integer" selected>integer</option>
+                    </select>
+                  </div>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    class="input w-full text-right"
+                    value="8000"
+                  />
+                </td>
+                <td class="text-right">
+                  <a class="button button--icon" href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      ><polyline points="3 6 5 6 21 6"></polyline><path
+                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                      ></path></svg
+                    >
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <a href="#" class="button button--secondary w-full"
+                    >Add Attribute</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </PageBody>
+</HorizontalLayout>

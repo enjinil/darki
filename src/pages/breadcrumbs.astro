@@ -1,0 +1,16 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+---
+
+<HorizontalLayout title="Breadcrumbs | Darki Admin">
+  <PageHeader pretitle="Element" title="Breadcrumbs" />
+  <PageBody>
+    <ul class="breadcrumb mb-xxl">
+      <li class="breadcrumb__item"><a href="#">Home</a></li>
+      <li class="breadcrumb__item"><a href="#">Elements</a></li>
+      <li class="breadcrumb__item"><span>Breadcrumbs</span></li>
+    </ul>
+  </PageBody>
+</HorizontalLayout>

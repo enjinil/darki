@@ -1,0 +1,213 @@
+---
+import HorizontalLayout from "../layouts/HorizontalLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import PageBody from "../components/PageBody.astro";
+---
+
+<HorizontalLayout title="Lists | Darki Admin">
+  <PageHeader pretitle="Element" title="Lists" />
+  <PageBody>
+    <div class="grid-2 mb-xxl">
+      <div>
+        <div class="card mb-lg">
+          <div class="card__header">
+            <span class="card__title">Basic list</span>
+          </div>
+          <div class="list">
+            <div class="list__item">
+              <div class="row">
+                <div class="row__col pr-lg">
+                  <div class="avatar">
+                    <img src="/images/avatar.png" alt="Jhonny Ken" />
+                  </div>
+                </div>
+                <div class="row__col-auto">
+                  <div class="text-md">Jhonny Ken</div>
+                  <div class="text-sm text-secondary">Lead Developer</div>
+                </div>
+              </div>
+            </div>
+            <div class="list__item">
+              <div class="row">
+                <div class="row__col pr-lg">
+                  <div class="avatar">
+                    <img src="/images/avatar.png" alt="Jhonny Ken" />
+                  </div>
+                </div>
+                <div class="row__col-auto">
+                  <div class="text-md">Jhonny Ken</div>
+                  <div class="text-sm text-secondary">Lead Developer</div>
+                </div>
+              </div>
+            </div>
+            <div class="list__item">
+              <div class="row">
+                <div class="row__col pr-lg">
+                  <div class="avatar">
+                    <img src="/images/avatar.png" alt="Jhonny Ken" />
+                  </div>
+                </div>
+                <div class="row__col-auto">
+                  <div class="text-md">Jhonny Ken</div>
+                  <div class="text-sm text-secondary">Lead Developer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <span class="card__title">Links</span>
+          </div>
+          <div class="list list--links">
+            <a class="list__item">A link to home</a>
+            <a class="list__item is-active">A link to lists</a>
+            <a class="list__item">A link to login</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card mb-lg">
+          <div class="card__header">
+            <span class="card__title">Hoverable list</span>
+          </div>
+          <div class="list list--hoverable">
+            <div class="list__item">
+              <div class="row">
+                <div class="row__col pr-lg">
+                  <div class="avatar">
+                    <img src="/images/avatar.png" alt="Jhonny Ken" />
+                  </div>
+                </div>
+                <div class="row__col-auto">
+                  <div class="text-md">Jhonny Ken</div>
+                  <div class="text-sm text-secondary">Lead Developer</div>
+                </div>
+              </div>
+            </div>
+            <div class="list__item">
+              <div class="row">
+                <div class="row__col pr-lg">
+                  <div class="avatar">
+                    <img src="/images/avatar.png" alt="Jhonny Ken" />
+                  </div>
+                </div>
+                <div class="row__col-auto">
+                  <div class="text-md">Jhonny Ken</div>
+                  <div class="text-sm text-secondary list__show-hover">
+                    Hidden status
+                  </div>
+                </div>
+                <div class="row__col text-sm py-sm list__show-hover">
+                  『 Delete 』
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-lg">
+          <div class="card__header">
+            <span class="card__title">Small list</span>
+          </div>
+          <div class="list list--sm">
+            <div class="list__item">
+              <div class="row">
+                <div class="row__col pr-lg">
+                  <div class="avatar">
+                    <img src="/images/avatar.png" alt="Jhonny Ken" />
+                  </div>
+                </div>
+                <div class="row__col-auto">
+                  <div class="text-md">Jhonny Ken</div>
+                  <div class="text-sm text-secondary">Lead Developer</div>
+                </div>
+              </div>
+            </div>
+            <div class="list__item">
+              <div class="row">
+                <div class="row__col pr-lg">
+                  <div class="avatar">
+                    <img src="/images/avatar.png" alt="Jhonny Ken" />
+                  </div>
+                </div>
+                <div class="row__col-auto">
+                  <div class="text-md">Jhonny Ken</div>
+                  <div class="text-sm text-secondary list__show-hover">
+                    Hidden status
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <span class="card__title">Borderless list</span>
+          </div>
+          <div class="grid-2">
+            <div class="list list--borderless">
+              <div class="list__item">
+                <div class="row">
+                  <div class="row__col pr-lg">
+                    <div class="avatar">
+                      <img src="/images/avatar.png" alt="Jhonny Ken" />
+                    </div>
+                  </div>
+                  <div class="row__col-auto">
+                    <div class="text-md">Jhonny Ken</div>
+                    <div class="text-sm text-secondary">Lead Developer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="list__item">
+                <div class="row">
+                  <div class="row__col pr-lg">
+                    <div class="avatar">
+                      <img src="/images/avatar.png" alt="Jhonny Ken" />
+                    </div>
+                  </div>
+                  <div class="row__col-auto">
+                    <div class="text-md">Jhonny Ken</div>
+                    <div class="text-sm text-secondary list__show-hover">
+                      Hidden status
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list list--borderless">
+              <div class="list__item">
+                <div class="row">
+                  <div class="row__col pr-lg">
+                    <div class="avatar">
+                      <img src="/images/avatar.png" alt="Jhonny Ken" />
+                    </div>
+                  </div>
+                  <div class="row__col-auto">
+                    <div class="text-md">Jhonny Ken</div>
+                    <div class="text-sm text-secondary">Lead Developer</div>
+                  </div>
+                </div>
+              </div>
+              <div class="list__item">
+                <div class="row">
+                  <div class="row__col pr-lg">
+                    <div class="avatar">
+                      <img src="/images/avatar.png" alt="Jhonny Ken" />
+                    </div>
+                  </div>
+                  <div class="row__col-auto">
+                    <div class="text-md">Jhonny Ken</div>
+                    <div class="text-sm text-secondary list__show-hover">
+                      Hidden status
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </PageBody>
+</HorizontalLayout>

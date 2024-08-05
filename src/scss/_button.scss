@@ -1,0 +1,130 @@
+// ✨ Button
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: $field-height;
+  min-width: 4rem;
+  border: 1px solid currentColor;
+  background-color: $bg-elevated;
+  color: color(primary);
+  box-shadow: $shadow;
+  text-shadow: $text-shadow;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  font-weight: 500;
+  text-wrap: nowrap;
+
+  &:hover,
+  &.is-hovered {
+    background-color: brighten($bg-elevated, 2);
+  }
+
+  &:focus,
+  &.is-focused {
+    background-color: brighten($bg-elevated, 2);
+    @include outline-focus;
+  }
+}
+
+.button-group {
+  display: inline-flex;
+
+  > *:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+}
+
+// States
+.button[disabled],
+.button.is-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.button.is-loading {
+  position: relative;
+  pointer-events: none;
+  text-shadow: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 8px);
+    top: calc(50% - 8px);
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    border-left: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid transparent;
+    border-top: 2px solid transparent;
+    display: block;
+    animation: spin 0.4s linear infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Variant
+@each $name, $color in $colors {
+  .button--#{$name} {
+    background: $color;
+    color: $white;
+    border-color: darken($color, 2);
+
+    &:hover,
+    &.is-hovered {
+      color: $white;
+      background-color: darken($color, 2);
+    }
+
+    &:focus,
+    &.is-focused {
+      background-color: darken($color, 2);
+      @include outline-focus;
+    }
+  }
+}
+
+.button--text {
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+
+  &.is-loading {
+    color: transparent;
+
+    &::after {
+      color: color(primary);
+    }
+  }
+}
+
+.button--icon {
+  padding: 0;
+  width: $field-height;
+  min-width: $field-height;
+}
